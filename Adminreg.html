@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="{% static 'javascript.js'%}">
+    </script>
+</head>
+
+<body>
+<div align="center">
+<h1>  Registration Form</h1>
+
+
+<form method="post" id="f">
+    {{form.as_p}}
+
+    {% csrf_token%}
+    <input type="submit" id="register" value="Submit" />  <input type="reset" value="Clear">
+
+
+</form>
+</div>
+
+
+</body>
+</html>
