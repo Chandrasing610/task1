@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+
+<script>
+ function click(){
+    alert("Thanks");
+ }
+</script>
+ <form method="post" >
+ <header>Login</header>
+{{f.as_p}}
+{% csrf_token%}
+
+ <input type="submit" onclick="click()"></input>
+
+
+ </form>
+</body>
+</html>

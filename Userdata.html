@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserData</title>
+     <link rel="stylesheet" href="{% static "demo.css"%}">
+</head>
+<body>
+ {% include 'HTML/Submit.html' %}
+<h1>User's Information</h1>
+{% if list %}
+<table>
+    <thead>
+    <th>Type</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>MobNo</th>
+    <th>age</th>
+    <th>Address</th>
+    <th>Password</th>
+    <th>Gender</th>
+    <th>Married_status</th>
+    </thead>
+    {% for item in list %}
+    <tr>
+        <td>{{item.Form}}</td>
+        <td>{{item.Name}}</td>
+        <td>{{item.Email}}</td>
+        <td>{{item.MobNo}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.Address}}</td>
+        <td>{{item.Password}}</td>
+        <td>{{item.Gender}}</td>
+        <td>{{item.Married_status}}</td>
+    </tr>
+    {% endfor%}
+
+</table>
+{%else%}
+<h1> No record Found</h1>
+{%endif%}
+</body>
+</html>
